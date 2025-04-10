@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Ghi Chú</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="navbar">
+    <h1>Trang Ghi Chú</h1>
+    <button onclick="showNotePage()">Ghi Chú</button>
+  </div>
+
+  <div id="content">
+    <div id="notePage" style="display: none;">
+      <h2>Viết Ghi Chú</h2>
+      <div id="noteContainer">
+        <textarea id="noteText" placeholder="Ghi chú ở đây..." style="width: 100%; height: 200px;"></textarea>
+        <div>
+          <button onclick="addText()">Thêm Văn Bản</button>
+          <button onclick="addImage()">Thêm Hình Ảnh</button>
+          <button onclick="addAudio()">Thêm Âm Thanh</button>
+          <button onclick="addVideo()">Thêm Video</button>
+          <button onclick="addSticker()">Thêm Sticker</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
