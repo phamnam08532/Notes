@@ -7,8 +7,26 @@ function addText() {
   const noteText = document.getElementById('noteText').value;
   const textElement = document.createElement('p');
   textElement.textContent = noteText;
+  textElement.style.fontFamily = document.getElementById('fontSelector').value;
+  textElement.style.fontSize = document.getElementById('fontSizeSelector').value;
+  textElement.style.fontStyle = document.getElementById('fontStyleSelector').value;
   document.getElementById('noteContainer').appendChild(textElement);
   document.getElementById('noteText').value = ''; // Reset textarea
+}
+
+function changeFont() {
+  const font = document.getElementById('fontSelector').value;
+  document.getElementById('noteText').style.fontFamily = font;
+}
+
+function changeFontSize() {
+  const fontSize = document.getElementById('fontSizeSelector').value;
+  document.getElementById('noteText').style.fontSize = fontSize;
+}
+
+function changeFontStyle() {
+  const fontStyle = document.getElementById('fontStyleSelector').value;
+  document.getElementById('noteText').style.fontStyle = fontStyle;
 }
 
 function addImage() {
@@ -64,4 +82,4 @@ function addSticker() {
   sticker.style.width = '50px';
   sticker.style.margin = '10px';
   document.getElementById('noteContainer').appendChild(sticker);
-    }
+      }
