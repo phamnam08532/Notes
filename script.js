@@ -82,4 +82,4 @@ function addSticker() {
   sticker.style.width = '50px';
   sticker.style.margin = '10px';
   document.getElementById('noteContainer').appendChild(sticker);
-      }
+                            }
