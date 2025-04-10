@@ -7,11 +7,22 @@ function addText() {
   const noteText = document.getElementById('noteText').value;
   const textElement = document.createElement('p');
   textElement.textContent = noteText;
-  textElement.style.fontFamily = document.getElementById('fontSelector').value;
-  textElement.style.fontSize = document.getElementById('fontSizeSelector').value;
-  textElement.style.fontStyle = document.getElementById('fontStyleSelector').value;
+
+  // Lấy font, cỡ chữ và kiểu chữ hiện tại
+  const font = document.getElementById('fontSelector').value;
+  const fontSize = document.getElementById('fontSizeSelector').value;
+  const fontStyle = document.getElementById('fontStyleSelector').value;
+
+  // Áp dụng các style vào văn bản mới
+  textElement.style.fontFamily = font;
+  textElement.style.fontSize = fontSize;
+  textElement.style.fontStyle = fontStyle;
+  
+  // Thêm văn bản vào ghi chú
   document.getElementById('noteContainer').appendChild(textElement);
-  document.getElementById('noteText').value = ''; // Reset textarea
+
+  // Reset lại textarea
+  document.getElementById('noteText').value = '';
 }
 
 function changeFont() {
@@ -76,10 +87,10 @@ function addVideo() {
 }
 
 function addSticker() {
-  const stickers = ['sticker1.png', 'sticker2.png', 'sticker3.png']; // Add your sticker images here
+  const stickers = ['sticker1.png', 'sticker2.png', 'sticker3.png']; // Thêm ảnh sticker vào đây
   const sticker = document.createElement('img');
   sticker.src = stickers[Math.floor(Math.random() * stickers.length)];
   sticker.style.width = '50px';
   sticker.style.margin = '10px';
   document.getElementById('noteContainer').appendChild(sticker);
-}
+    }
