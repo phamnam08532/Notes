@@ -15,7 +15,35 @@
   <div id="content">
     <div id="notePage" style="display: none;">
       <h2>Viết Ghi Chú</h2>
+      
       <div id="noteContainer">
+        <div>
+          <label for="fontSelector">Chọn Font:</label>
+          <select id="fontSelector" onchange="changeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+          </select>
+
+          <label for="fontSizeSelector">Cỡ chữ:</label>
+          <select id="fontSizeSelector" onchange="changeFontSize()">
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+            <option value="24px">24px</option>
+            <option value="30px">30px</option>
+          </select>
+
+          <label for="fontStyleSelector">Kiểu chữ:</label>
+          <select id="fontStyleSelector" onchange="changeFontStyle()">
+            <option value="normal">Bình thường</option>
+            <option value="italic">In nghiêng</option>
+            <option value="bold">Đậm</option>
+          </select>
+        </div>
+
         <textarea id="noteText" placeholder="Ghi chú ở đây..." style="width: 100%; height: 200px;"></textarea>
         <div>
           <button onclick="addText()">Thêm Văn Bản</button>
